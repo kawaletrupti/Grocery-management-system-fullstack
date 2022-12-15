@@ -1,0 +1,37 @@
+<!-- <p>client-login-page works!</p>
+<div class="main">
+    <h1>Client SignIn</h1>
+    <div class="item-icon">
+       <div class="icon">
+        </div><input type="text" [(ngModel)]="email" placeholder="Email">
+    </div>
+    <br />
+    <div class="item-icon">
+        <div class="icon">
+         </div><input type="password" [(ngModel)]="password" placeholder="Password">
+     </div>
+     <br />
+    <div>
+        <button (click)="signIn()">SignIn</button>
+    </div>
+    <br><br>
+ </div>    -->
+
+
+<div class="container">
+  <form class="custom-centered p-4 border">
+    <h2 align="center">Sign In</h2>
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email </label>
+      <input type="email" class="form-control" name="email" [(ngModel)]="email" >
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="password">
+    </div>
+
+    <button type="submit" (click)="signIn()" class="btn btn-primary">Sign In</button>
+  
+  </form>
+
+</div>

@@ -1,0 +1,186 @@
+<!-- <div class="main">
+    <h1>Register</h1>
+    <table>
+        <tr>
+            <td class="label">FirstName</td>
+            <td>
+                <input type="text" [(ngModel)]="firstName">
+            </td>
+        </tr>
+        <tr>
+            <td class="label">LastName</td>
+            <td>
+                <input type="text" [(ngModel)]="lastName">
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Email</td>
+            <td>
+                <input type="text" [(ngModel)]="email">
+            </td>
+        </tr>
+        <tr>
+            <td class="label">DOB</td>
+            <td>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="setDOB($event)"
+                    >
+                    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker #picker ></mat-datepicker>
+                  </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="information">
+                Date should be yyyy-mm-dd Format
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Gender</td>
+            <td>
+                <select [ngModel]="gender" class="box">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">Phone</td>
+            <td>
+                <input type="text" [(ngModel)]="phone">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">District</td>
+            <td>
+                <input type="text" [(ngModel)]="district">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">ZipCode</td>
+            <td>
+                <input type="text" [(ngModel)]="zipcode">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="label">state</td>
+            <td>
+                <input type="text" [(ngModel)]="state">
+            </td>
+        </tr>
+        <tr>
+            <td class="label">Password</td>
+            <td>
+                <input type="password" [(ngModel)]="password">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="information">
+                Password should contains 1 Uppercase, 1 Digit and should be 8 character long
+            </td>
+        </tr>
+        <tr>
+            <td class="submit">
+                <button (click)="signup()" [disabled]="firstName === '' || lastName === '' || email === '' || password === ''">Signup</button>
+            </td>
+        </tr>
+    </table>
+</div>  -->
+
+
+<div class="container">
+    
+    <form class="custom-centered p-4 border">
+        <h2 align="center">Sign Up</h2>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputfname">First Name</label>
+            <input type="text" class="form-control" id="inputfname" placeholder="First Name" name="firstName" [(ngModel)]="firstName">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputlname">Last Name</label>
+            <input type="text" class="form-control" id="inputlname" placeholder="Last Name" name="lastName" [(ngModel)]="lastName">
+          </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputemail">Email</label>
+                <input type="email" class="form-control" id="inputemail" placeholder="Email" name="email" [(ngModel)]="email" >
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" name="password" [(ngModel)]="password">
+                  
+              </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputdob">Date Of Birth</label>
+                <mat-form-field>
+                  <input class="form-control" id="inputdob" matInput [matDatepicker]="picker" placeholder="Choose a date" (dateChange)="setDOB($event)">
+                  <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle><mat-datepicker #picker ></mat-datepicker>
+                  
+                </mat-form-field>
+                
+              </div>
+
+
+              <div class="form-group col-md-6">
+                <label for="inputGender">Gender</label>
+                <select id="inputGender" class="form-control" name="gender" [ngModel]="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        
+
+    
+        
+
+        <div class="form-group">
+            <label for="inputphone">Phone</label>
+            <input type="text" class="form-control" id="inputphone" placeholder="Phone" name="phone" [(ngModel)]="phone" >
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputdist">District</label>
+            <input type="text" class="form-control" id="inputdist" name="district" [(ngModel)]="district">
+          </div>
+
+
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" name="zipcode" [(ngModel)]="zipcode">
+          </div> 
+
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <input type="text" class="form-control" id="inputState" name="state" [(ngModel)]="state">
+            
+          </div>
+          
+        </div>
+
+        
+        
+        <button type="submit" class="btn btn-primary" (click)="signup()" [disabled]="firstName === '' || lastName === '' || email === '' || password === ''">Sign Up</button>
+    </form>
+        
+</div>
+
+
+
+
+ 

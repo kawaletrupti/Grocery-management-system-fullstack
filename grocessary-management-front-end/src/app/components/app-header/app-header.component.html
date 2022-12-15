@@ -1,0 +1,46 @@
+
+<!-- <div class="main">
+    <div (click)="gotourl('')" [class.selected]="url === '/'">Home</div>
+    <div (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">Aboutus</div>
+    <div (click)="gotourl('client-register')"  [class.selected]="url === '/client-register'">Register</div>
+    <div (click)="gotourl('client-login')" [class.selected]="url === '/client-login'">ClientLogin</div>
+    <div (click)="gotourl('admin-login')" [class.selected]="url === '/admin-login'">AdminLogin</div>
+    <div (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contactus</div>
+</div> -->
+
+
+<header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h2>Grocery <em>Shop</em></h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" (click)="gotourl('')" [class.selected]="url === '/'">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">AboutUs</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="gotourl('client-register')"  [class.selected]="url === '/client-register'">Register</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="gotourl('client-login')" [class.selected]="url === '/client-login'">ClientLogin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="gotourl('admin-login')" [class.selected]="url === '/admin-login'">AdminLogin</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
